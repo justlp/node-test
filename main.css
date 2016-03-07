@@ -1,0 +1,15 @@
+body {
+    font-size: 12px;
+}
+
+body, html {
+    position: relative;
+}
+
+.block, body {
+    color: red;
+}
+
+.block__elem {
+    background: #fff;
+}
