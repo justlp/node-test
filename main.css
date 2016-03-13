@@ -1,15 +1,9 @@
-body {
-    font-size: 12px;
+.block{
+    padding-left: 0;
+    list-style-type: none;
 }
-
-body, html {
-    position: relative;
-}
-
-.block, body {
-    color: red;
-}
-
-.block__elem {
-    background: #fff;
+.block__elem{
+    background: #CCC8C8;
+    padding: 5px 0;
+    color: #fff;
 }
