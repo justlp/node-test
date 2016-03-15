@@ -33,31 +33,31 @@ fs.readFile('./index.html', 'utf8' ,function(err, data){
     $ = cheerio.load(data);
     var pageSource = $.parseHTML(data);
 
-    pageSource.forEach(function(item){
-       if (item.name === 'html'){
-           var htmlChildrens = item.children;
-
-           htmlChildrens.forEach(function(item){
-               if (item.name === 'body'){
-
-                   item.children.forEach(function(item){
-                      if (item.type === 'tag'){
-                          var tagClass = item.attribs.class;
-
-
-                          item.children.forEach(function(item){
-                              if (item.type === 'tag') {
-                                  if (item.attribs.class.indexOf(tagClass + '_') != -1){
-                                      console.log(item);
-                                  }
-                              }
-                          });
-                      }
-                   });
-               }
-           })
-       }
-    });
+    //pageSource.forEach(function(item){
+    //   if (item.name === 'html'){
+    //       var htmlChildrens = item.children;
+    //
+    //       htmlChildrens.forEach(function(item){
+    //           if (item.name === 'body'){
+    //
+    //               item.children.forEach(function(item){
+    //                  if (item.type === 'tag'){
+    //                      var tagClass = item.attribs.class;
+    //
+    //
+    //                      item.children.forEach(function(item){
+    //                          if (item.type === 'tag') {
+    //                              if (item.attribs.class.indexOf(tagClass + '_') != -1){
+    //                                  console.log(item);
+    //                              }
+    //                          }
+    //                      });
+    //                  }
+    //               });
+    //           }
+    //       })
+    //   }
+    //});
 
 
 
